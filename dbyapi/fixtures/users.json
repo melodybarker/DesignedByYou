@@ -1,0 +1,32 @@
+[
+  {
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+      "firstname": "Melody",
+      "lastname": "Barker",
+      "email": "melb@gmail.com",
+      "password": "123"
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 2,
+    "fields": {
+      "firstname": "Sam",
+      "lastname": "Barker",
+      "email": "samb@gmail.com",
+      "password": "123"
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 3,
+    "fields": {
+      "firstname": "Joey",
+      "lastname": "Knight",
+      "email": "joek@gmail.com",
+      "password": "123"
+    }
+  }
+]

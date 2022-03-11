@@ -1,0 +1,26 @@
+[
+  {
+    "model": "dbyapi.follow",
+    "pk": 1,
+    "fields": {
+      "following": 2,
+      "follower": 1
+    }
+  },
+  {
+    "model": "dbyapi.follow",
+    "pk": 2,
+    "fields": {
+      "following": 3,
+      "follower": 1
+    }
+  },
+  {
+    "model": "dbyapi.follow",
+    "pk": 3,
+    "fields": {
+      "following": 1,
+      "follower": 3
+    }
+  }
+]

@@ -1,0 +1,156 @@
+[
+  {
+    "model": "dbyapi.category",
+    "pk": 1,
+    "fields": {
+      "label": "Art"
+    }
+  },
+  {
+    "model": "dbyapi.category",
+    "pk": 2,
+    "fields": {
+      "label": "Baking"
+    }
+  },
+  {
+    "model": "dbyapi.category",
+    "pk": 3,
+    "fields": {
+      "label": "Beauty"
+    }
+  },
+  {
+    "model": "dbyapi.category",
+    "pk": 4,
+    "fields": {
+      "label": "Crafts"
+    }
+  },
+  {
+    "model": "dbyapi.category",
+    "pk": 5,
+    "fields": {
+      "label": "Drawing"
+    }
+  },
+  {
+    "model": "dbyapi.category",
+    "pk": 6,
+    "fields": {
+      "label": "Electronics"
+    }
+  },
+  {
+    "model": "dbyapi.category",
+    "pk": 7,
+    "fields": {
+      "label": "Farming"
+    }
+  },
+  {
+    "model": "dbyapi.category",
+    "pk": 8,
+    "fields": {
+      "label": "Fashion Design"
+    }
+  },
+  {
+    "model": "dbyapi.category",
+    "pk": 9,
+    "fields": {
+      "label": "Gardening"
+    }
+  },
+  {
+    "model": "dbyapi.category",
+    "pk": 10,
+    "fields": {
+      "label": "Home Improvement"
+    }
+  },
+  {
+    "model": "dbyapi.category",
+    "pk": 11,
+    "fields": {
+      "label": "Jewelry Design"
+    }
+  },
+  {
+    "model": "dbyapi.category",
+    "pk": 12,
+    "fields": {
+      "label": "Landscaping"
+    }
+  },
+  {
+    "model": "dbyapi.category",
+    "pk": 13,
+    "fields": {
+      "label": "Leatherwork"
+    }
+  },
+  {
+    "model": "dbyapi.category",
+    "pk": 14,
+    "fields": {
+      "label": "Music"
+    }
+  },
+  {
+    "model": "dbyapi.category",
+    "pk": 15,
+    "fields": {
+      "label": "Petcare"
+    }
+  },
+  {
+    "model": "dbyapi.category",
+    "pk": 16,
+    "fields": {
+      "label": "Quilting"
+    }
+  },
+  {
+    "model": "dbyapi.category",
+    "pk": 17,
+    "fields": {
+      "label": "Science"
+    }
+  },
+  {
+    "model": "dbyapi.category",
+    "pk": 18,
+    "fields": {
+      "label": "Technology"
+    }
+  },
+  {
+    "model": "dbyapi.category",
+    "pk": 19,
+    "fields": {
+      "label": "Upcycling"
+    }
+  },
+  {
+    "model": "dbyapi.category",
+    "pk": 20,
+    "fields": {
+      "label": "Vehicle"
+    }
+  },
+  {
+    "model": "dbyapi.category",
+    "pk": 21,
+    "fields": {
+      "label": "Wellness"
+    }
+  },
+  {
+    "model": "dbyapi.category",
+    "pk": 22,
+    "fields": {
+      "label": "Woodworking"
+    }
+  }
+]

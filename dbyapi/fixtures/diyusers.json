@@ -1,0 +1,29 @@
+[
+  {
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+      "user": 1,
+      "bio": "Hello friends! Here, you will find step-by-step tutorials for home decor projects, fashion, and easy to make recipes. I hope you enjoy!",
+      "created_on": "2022-01-24T14:51:39.989Z"
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 2,
+    "fields": {
+      "user": 2,
+      "bio": "I'm Sam. I post projects to help take your home from builder-grade to custom-made with low cost home upgrades you can tackle in a weekend or less!",
+      "created_on": "2022-01-24T14:51:39.989Z"
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 3,
+    "fields": {
+      "user": 3,
+      "bio": "Hi, I'm Joey. I'm a lifelong artist, crafter, and avid DIYer. Some of my favorite mediums include illustration, woodworking, and scuplting.",
+      "created_on": "2022-01-24T14:51:39.989Z"
+    }
+  }
+]
