@@ -6,7 +6,7 @@
       "content": "Wow, exactly what I need in my skin care routine!",
       "date": "2022-02-28T14:51:39.989Z",
       "post": 1,
-      "user": 3
+      "diyuser": 3
     }
   },
   {
@@ -16,7 +16,7 @@
       "content": "I can't wait to try on my stairs!",
       "date": "2022-02-28T14:51:39.989Z",
       "post": 2,
-      "user": 1
+      "diyuser": 1
     }
   },
   {
@@ -26,7 +26,7 @@
       "content": "I want to try this will my kids. They love painting!",
       "date": "2022-02-28T14:51:39.989Z",
       "post": 3,
-      "user": 2
+      "diyuser": 2
     }
   },
   {
@@ -36,7 +36,7 @@
       "content": "So glad to hear! Enjoy!",
       "date": "2022-03-01T14:51:39.989Z",
       "post": 1,
-      "user": 1
+      "diyuser": 1
     }
   }
 ]

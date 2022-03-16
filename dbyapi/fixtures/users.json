@@ -3,30 +3,54 @@
     "model": "auth.user",
     "pk": 1,
     "fields": {
-      "firstname": "Melody",
-      "lastname": "Barker",
+      "password": "123",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "melb@gmail.com",
+      "first_name": "Melody",
+      "last_name": "Barker",
       "email": "melb@gmail.com",
-      "password": "123"
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2020-08-28T14:51:39.989Z",
+      "groups": [],
+      "user_permissions": []
     }
   },
   {
     "model": "auth.user",
     "pk": 2,
     "fields": {
-      "firstname": "Sam",
-      "lastname": "Barker",
+      "password": "123",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "samb@gmail.com",
+      "first_name": "Sam",
+      "last_name": "Barker",
       "email": "samb@gmail.com",
-      "password": "123"
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2022-01-25T02:50:54.155Z",
+      "groups": [],
+      "user_permissions": []
     }
   },
   {
     "model": "auth.user",
     "pk": 3,
     "fields": {
-      "firstname": "Joey",
-      "lastname": "Knight",
-      "email": "joek@gmail.com",
-      "password": "123"
+      "password": "123",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "joeyk@gmail.com",
+      "first_name": "Joey",
+      "last_name": "Knight",
+      "email": "joeyk@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2022-01-25T03:06:41.363Z",
+      "groups": [],
+      "user_permissions": []
     }
   }
 ]
