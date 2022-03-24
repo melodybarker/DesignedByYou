@@ -8,7 +8,7 @@ from rest_framework import status
 
 
 class CategoryView(ViewSet):
-  """Level up game types"""
+  """category types"""
 
   def retrieve(self, request, pk=None):
     """Handle GET requests for single post category

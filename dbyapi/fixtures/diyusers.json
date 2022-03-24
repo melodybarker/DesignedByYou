@@ -1,29 +1,52 @@
 [
   {
-    "model": "auth.user",
+    "model": "dbyapi.diyuser",
     "pk": 1,
     "fields": {
       "user": 1,
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png",
       "bio": "Hello friends! Here, you will find step-by-step tutorials for home decor projects, fashion, and easy to make recipes. I hope you enjoy!",
       "created_on": "2022-01-24T14:51:39.989Z"
     }
   },
   {
-    "model": "auth.user",
+    "model": "dbyapi.diyuser",
     "pk": 2,
     "fields": {
       "user": 2,
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png",
       "bio": "I'm Sam. I post projects to help take your home from builder-grade to custom-made with low cost home upgrades you can tackle in a weekend or less!",
-      "created_on": "2022-01-24T14:51:39.989Z"
+      "created_on": "2022-01-25T02:50:54.155Z"
     }
   },
   {
-    "model": "auth.user",
-    "pk": 3,
+    "model": "dbyapi.diyuser",
+    "pk": 6,
     "fields": {
-      "user": 3,
+      "user": 6,
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png",
       "bio": "Hi, I'm Joey. I'm a lifelong artist, crafter, and avid DIYer. Some of my favorite mediums include illustration, woodworking, and scuplting.",
-      "created_on": "2022-01-24T14:51:39.989Z"
+      "created_on": "2022-01-25T03:06:41.363Z"
+    }
+  },
+  {
+    "model": "dbyapi.diyuser",
+    "pk": 7,
+    "fields": {
+      "user": 7,
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png",
+      "bio": "Hi, I'm Joey. I'm a lifelong artist, crafter, and avid DIYer. Some of my favorite mediums include illustration, woodworking, and scuplting.",
+      "created_on": "2022-03-23T03:35:34.794832Z"
+    }
+  },
+  {
+    "model": "dbyapi.diyuser",
+    "pk": 8,
+    "fields": {
+      "user": 8,
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png",
+      "bio": "Hi, I'm Ken. I'm a lifelong artist, crafter, and avid DIYer. Some of my favorite mediums include illustration, woodworking, and scuplting.",
+      "created_on": "2022-03-23T20:08:27.847172Z"
     }
   }
 ]

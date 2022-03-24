@@ -6,59 +6,61 @@ from rest_framework.permissions import AllowAny
 from rest_framework.response import Response
 from dbyapi.models import DiyUser
 
+
 @api_view(['POST'])
 @permission_classes([AllowAny])
 def login_user(request):
-  """Handles the authentication of a diy user
-  Method arguments:
-  Request -- The full HTTP request object"""
+    """Handles the authentication of a diy user
+    Method arguments:
+    Request -- The full HTTP request object"""
 
-  email = request.data['email']
-  password = request.data['password']
+    username = request.data['username']
+    password = request.data['password']
 
-  # use the built-in authenticate method to verify
-  # authenticate returns the user object or None if no user is found
-  authenticated_user = authenticate(email=email, password=password)
+    # use the built-in authenticate method to verify
+    # authenticate returns the user object or None if no user is found
+    authenticated_user = authenticate(username=username, password=password)
 
-  # if authentication was successful, respond with their token
-  if authenticated_user is not None:
-    token = Token.objects.get(user=authenticated_user)
-    data = {
-      'valid': True,
-      'token': token.key,
-    }
-    return Response(data)
-  else:
-    # bad login details were provided. so we can't log the user in.
-    data = {'valid': False}
-    return Response(data)
+    # if authentication was successful, respond with their token
+    if authenticated_user is not None:
+        token = Token.objects.get(user=authenticated_user)
+        data = {
+            'valid': True,
+            'token': token.key,
+            'diyuser_pk': authenticated_user.diy_user.id
+        }
+        return Response(data)
+    else:
+        # bad login details were provided. so we can't log the user in.
+        data = {'valid': False}
+        return Response(data)
 
 
+@api_view(['POST'])
+@permission_classes([AllowAny])
 def register_user(request):
-  """Handles the creation of a new user for authentication
-  Method arguments: Request -- The full HTTP request object"""
+    '''Handles the creation of a new gamer for authentication
+    Method arguments:
+      request -- The full HTTP request object
+    '''
 
-  # create a new user by invoking the 'create_user' helper method
-  # on Django's built-in User model
-  new_user = User.objects.create_user(
-    email=request.data['email'],
-    password=request.data['password'],
-    firstname=request.data['firstname'],
-    lastname=request.data['lastname']
-  )
+    # Create a new user by invoking the `create_user` helper method
+    # on Django's built-in User model
+    new_user = User.objects.create_user(
+        username=request.data['username'],
+        email=request.data['email'],
+        password=request.data['password'],
+        first_name=request.data['first_name'],
+        last_name=request.data['last_name']
+    )
 
-  # now save the extra info in the dbyapi_diyuser table
-  diyuser = DiyUser.objects.create(
-    bio=request.data['bio'],
-    user=new_user
-  )
+    # Now save the extra info in the levelupapi_gamer table
+    diyuser = DiyUser.objects.create(
+        user=new_user
+    )
 
-  # use the REST framework's token genderator on the new user account
-  token = Token.objects.create(user=diyuser.user)
-  # return the token to the clint
-  data = {
-    'valid': True,
-    'token': token.key,
-    'diyuser_pk': diyuser.id
-  }
-  return Response(data)
+    # Use the REST Framework's token generator on the new user account
+    token = Token.objects.create(user=diyuser.user)
+    # Return the token to the client
+    data = { 'token': token.key, 'valid': True, 'diyuser_pk': diyuser.id }
+    return Response(data)
