@@ -89,24 +89,6 @@ class CommentView(ViewSet):
                             status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 
-class CommentSerializer(serializers.ModelSerializer):
-    """JSON serializer for comments
-    Arguments: serializers"""
-
-    class Meta:
-        model = Comment
-        fields = ('id', 'content', 'date', 'post', 'diyuser')
-        depth = 3
-
-
-class PostSerializer(serializers.ModelSerializer):
-    """JSON serializer for posts
-    Arguments: serializers"""
-
-    class Meta:
-        model = Post
-        firleds = ('id', 'category', 'title',
-                   'content', 'image_url', 'date', 'diyuser', 'likes')
 
 
 class CommentUserSerializer(serializers.ModelSerializer):
@@ -121,4 +103,24 @@ class CommentDiyUserSerializer(serializers.ModelSerializer):
     user = CommentUserSerializer(many=False)
 
     class Meta:
-        model = DiyUserfields = ['id', 'following', 'likes', 'user', 'image_url', 'created_on', 'bio']
+        model = DiyUserfields = ['id', 'likes', 'user', 'image_url', 'created_on', 'bio']
+
+
+class PostSerializer(serializers.ModelSerializer):
+    """JSON serializer for posts
+    Arguments: serializers"""
+
+    class Meta:
+        model = Post
+        firleds = ('id', 'category', 'title',
+                   'content', 'image_url', 'date', 'diyuser', 'likes')
+
+
+class CommentSerializer(serializers.ModelSerializer):
+    """JSON serializer for comments
+    Arguments: serializers"""
+
+    class Meta:
+        model = Comment
+        fields = ('id', 'content', 'date', 'post', 'diyuser')
+        depth = 3

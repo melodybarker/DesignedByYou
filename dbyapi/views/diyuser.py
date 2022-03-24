@@ -1,9 +1,10 @@
 """View module for handling requests about diyusers"""
 from django.contrib.auth.models import User
+from django.http import HttpResponseServerError
 from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers
-from dbyapi.models import DiyUser
+from dbyapi.models import DiyUser, Following
 
 
 class DiyUserView(ViewSet):
@@ -12,10 +13,13 @@ class DiyUserView(ViewSet):
     def retrieve(self, request, pk=None):
         """Handle GET requests for single diyuser
         Return: Response -- JSON serialized diyuser"""
-        diyuser = request.auth.user.diy_user
 
-        serializer = DiyUserSerializer(diyuser, context={'request': request})
-        return Response(serializer.data)
+        try:
+            diyuser = DiyUser.objects.get(pk=pk)
+            serializer = DiyUserSerializer(diyuser, context={'request': request})
+            return Response(serializer.data)
+        except Exception as ex:
+            return HttpResponseServerError(ex)
 
     def list(self, request):
         """Handle GET requests to get all diyusers
@@ -40,5 +44,5 @@ class DiyUserSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = DiyUser
-        fields = ('id', 'user', 'bio', 'following', 'likes', 'image_url')
+        fields = ('id', 'user')
         depth = 3

@@ -1,0 +1,26 @@
+    [
+        {
+        "model": "dbyapi.following",
+        "pk": 1,
+        "fields": {
+            "from_diyuser": 6,
+            "to_diyuser":7
+        }
+    },
+        {
+        "model": "dbyapi.following",
+        "pk": 2,
+        "fields": {
+            "from_diyuser": 7,
+            "to_diyuser": 6
+        }
+    },
+        {
+        "model": "dbyapi.following",
+        "pk": 3,
+        "fields": {
+            "from_diyuser": 3,
+            "to_diyuser": 6
+        }
+    }
+]

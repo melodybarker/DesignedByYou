@@ -1,0 +1,35 @@
+[
+    {
+      "model": "dbyapi.like",
+      "pk": 1,
+      "fields": {
+        "liker": 7,
+        "diypost": 1
+      }
+    },
+    {
+      "model": "dbyapi.like",
+      "pk": 2,
+      "fields": {
+        "liker": 7,
+        "diypost": 3
+      }
+    },
+    {
+      "model": "dbyapi.like",
+      "pk": 3,
+      "fields": {
+        "liker": 3,
+        "diypost": 1
+      }
+    },
+    {
+        "model": "dbyapi.like",
+        "pk": 4,
+        "fields": {
+          "liker": 7,
+          "diypost": 2
+        }
+      }
+
+  ]

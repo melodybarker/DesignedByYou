@@ -35,8 +35,6 @@ class PostView(ViewSet):
             return Response({'reason': ex.message}, status=status.HTTP_400_BAD_REQUEST)
 
     def retrieve(self, request, pk=None):
-        """Handle GET requests for single post
-        Returns: Response -- JSON serialized post"""
 
         try:
             post = Post.objects.get(pk=pk)
@@ -50,23 +48,23 @@ class PostView(ViewSet):
         Returns: Response -- JSON serialized list of posts"""
 
         posts = Post.objects.all()
-        diyuser = DiyUser.objects.get(user=request.auth.user)
-        if diyuser is not None:
-            posts = posts.filter(diyuser_id=diyuser)
 
-        category = self.request.query_params.get('category_id', None)
-        if category is not None:
-            posts = posts.filter(categroy__id=type)
+        # if diyuser is not None:
+        #     posts = posts.filter(diyuser_id=diyuser)
+
+        # if category is not None:
+        #     posts = posts.filter(categroy__id=category)
 
         serializer = PostSerializer(
             posts, many=True, context={'request': request})
         return Response(serializer.data)
 
+
     def update(self, request, pk=None):
         """Handle PUT requests for a game
         Returns: Response -- Empty body with 204 status code"""
 
-        diyuser = DiyUser.objects.get(user=request.auth.user)
+        diyuser = DiyUser.objects.get(pk=request.data['diyuser'])
         category = Category.objects.get(pk=request.data['category'])
 
         post = Post.objects.get(pk=pk)
@@ -109,7 +107,8 @@ class PostDiyUserSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = DiyUser
-        fields = ['id', 'user', 'bio', 'likes', 'image_url', 'following']
+        fields = ['id', 'user', 'bio', 'image_url']
+        depth = 1
 
 
 class CategorySerializer(serializers.ModelSerializer):
@@ -126,6 +125,7 @@ class CommentSerializer(serializers.ModelSerializer):
     class Meta:
         model = Comment
         fields = ('id', 'content', 'date', 'post', 'diyuser')
+        depth = 1
 
 
 class PostSerializer(serializers.ModelSerializer):
@@ -136,5 +136,6 @@ class PostSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Post
-        fields = ('id', 'diyuser', 'title', 'category', 'date', 'image_url', 'content', 'comments', 'likes')
-        depth=3
+        fields = ('id', 'diyuser', 'title', 'category',
+                  'date', 'image_url', 'content', 'comments')
+        depth = 3
